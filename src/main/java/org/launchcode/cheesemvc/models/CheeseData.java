@@ -17,18 +17,18 @@ public class CheeseData {
     }
 
     // remove
-    public static void remove(int id) {
-        Cheese cheeseToRemove =getById(id);
+    public static void remove(String desc) {
+        Cheese cheeseToRemove =getByDesc(desc);
         cheeses.remove(cheeseToRemove);
     }
 
     // getById
-    public static Cheese getById(int id) {
+    public static Cheese getByDesc(String desc) {
 
         Cheese theCheese = null;
 
         for (Cheese candidateCheese : cheeses) {
-            if (candidateCheese.getCheeseId() == id) {
+            if (candidateCheese.getDescription() == desc) {
                 theCheese = candidateCheese;
             }
         }
